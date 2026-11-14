@@ -94,7 +94,8 @@ details { margin-top: 4px; }
 summary { cursor: pointer; color: var(--accent); font-size: 16px; }
 details p { margin: 6px 0 0; font-size: 16.5px; }
 
-.refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.refs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 24px; }
+@media (max-width: 620px) { .refs { grid-template-columns: 1fr; } }
 .refs div { font-size: 16.5px; }
 
 footer {
@@ -113,3 +114,13 @@ footer {
 /* Teaching page */
 .sub { font-family: Inter, system-ui, sans-serif; font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin: 22px 0 8px; }
 .course { margin: 0 0 14px; }
+
+/* Abstracts shown as text on the Research page */
+.abstract { margin: 6px 0 0; font-size: 16px; color: var(--muted); line-height: 1.55; }
+
+/* Photo column with links stacked underneath */
+.intro-side { flex-shrink: 0; width: 260px; }
+.intro-side img { width: 100%; display: block; }
+.side-links { font-family: Inter, system-ui, sans-serif; font-size: 15px; margin: 14px 0 0; padding: 0; list-style: none; }
+.side-links li { margin: 0 0 6px; }
+@media (max-width: 620px) { .intro-side { width: 150px; } }
